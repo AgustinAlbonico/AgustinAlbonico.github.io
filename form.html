@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" type="text/css" href="./normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-</head>
-
-<body>
-
-    <h2>Formulario de registro</h2>
-    <form action="mailto:agusalbo2024@gmail.com" method="post" target="_blank" enctype="text/plain">
-        <div>
-            <label for="NombreId">Nombre:</label>
-            <input type="text" placeholder="Nombre" id="NombreId" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+        <title>Registrate</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>AlboNews</h1> 
+            <img src="https://images.vexels.com/media/users/3/153807/isolated/lists/32e3ae0e21182a9539bf113fa5299f98-icono-de-trazo-de-color-de-edificios-de-oficinas.png" alt="Logo">
+       </header> 
+       <div class="menu">
+           <a href="#">Policiales</a>
+           <a href="#">Política</a>
+           <a href="#">Economía</a> 
+           <a href="#">Salud</a>
+           <a href="#">Internacionales</a>
+           <a href="#">Espectáculos</a>
+           <a href="#">Deportes</a>
+           <a href="index.html"><i>HOME</i></a>
+       </div>
+       <div class="menu-mobile">
+           <img src="https://cdn.icon-icons.com/icons2/935/PNG/512/menu-three-outlined-rounded-lines-symbol_icon-icons.com_73215.png" alt="">
+       </div>
+        <div class="suscripcion">
+            <h1>¡Suscribíte!</h1>
+            <p>Mantenete informado las 24hs, además tenes 40% de descuento en el primer año de suscripción</p>
+        </div>       
+       <div class="form-container">
+            <form action="">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="15" ><br>
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido" minlength="2" maxlength="15" ><br>
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email"><br>
+                <label for="numero">Numero telefonico:</label><br>
+                <input type="tel"name="numero" id="numero" pattern="[0-9]{10}"><br>
+                <label for="contraseña">Contraseña:</label><br>
+                <input type="password" name="contraseña" id="contraseña" minlength="4" maxlength="20"><br><br>
+                <input type="submit" value="Suscribirse" >
+            </form>
         </div>
-        <div>
-            <label for="ApellidoId">Apellido:</label>
-            <input type="text" placeholder="Nombre" id="Apellido" required>
-        </div>
-        <div>
-            <label for="EmailId">Email:</label>
-            <input type="email" placeholder="Email" id="EmailId" required>
-        </div>
-        <div>
-            <label for="PaisId">Pais:</label>
-            <select name="Pais" id="PaisId">
-                <option value="Argentina">Argentina</option>
-                <option value="Brasil">Brasil</option>
-                <option value="Uruguay">Uruguay</option>
-            </select>
-        </div>
-        <div>
-            <legend>Sexo:</legend>
-
-            <label for="M">M</label>
-            <input type="radio" name="sexo" id="M" value="M">
-
-            <label for="F">F</label>
-            <input type="radio" name="sexo" id="F" value="F">
-
-        </div>
-        <div>
-            <label for="TextoLibreId">Texto libre:</label>
-            <textarea placeholder="TextoLibre" id="TextoLibreId" rows="20" cols="50"></textarea>
-        </div>
-        <button type="submit">Registrar</button>
-        <button onclick="window.location.href='./index.html'">Cancelar</button>
-        <button type="reset">Reset</button>
-    </form>
-
-</body>
-
+    </body>
 </html>
